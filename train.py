@@ -94,7 +94,8 @@ def main():
     run.log("Max iterations:", np.int(args.max_iter))
 
     model = LogisticRegression(C=args.C, max_iter=args.max_iter).fit(x_train, y_train)
-    joblib.dump(model, f"c_{args.C:.6}_model.pkl")
+    os.makedirs('./outputs', exist_ok=True)
+    joblib.dump(model, f"./outputs/model.pkl")
 
     accuracy = model.score(x_test, y_test)
     run.log("Accuracy", np.float(accuracy))
