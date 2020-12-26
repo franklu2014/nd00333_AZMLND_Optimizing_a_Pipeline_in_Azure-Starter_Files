@@ -73,7 +73,7 @@ def main():
     accuracy = model.score(x_test, y_test)
     run.log("Accuracy", np.float(accuracy))
     
-    roc_auc = roc_auc_score(y_test, clf.predict_proba(x_test)[:, 1], average = 'weighted')
+    roc_auc = roc_auc_score(y_test, model.predict_proba(x_test)[:, 1], average = 'weighted')
     run.log('ROC_AUC', np.float(roc_auc))
 
 if __name__ == '__main__':
