@@ -41,7 +41,7 @@ Architecture-wise, the VotingEnsemble classifier collects predictions from multi
 
 If the time and resource permit, I would like to try deep learning algorithms with both HyperDrive and AutoML.  As deep learning algorithms are known to discover the non-linear relations between features and lables, it will be intersting to see if deep learning algorithms can outperform traditional ML models in this project.
 
-Another improvement is about HyperDrive configuration.  From some online research, it seems that hyperparametern sampling can have 2 stages: the first stage uses RandomParameterSampling for initial hyperparameter search, and then the second stage uses BayesianParameterSampling to refine the search for the best hyperparameter.  In addition, we can try another classification algorithm, such as RandomForester.  I'd like to see if the refined 2-stage hyperparameter tuning combined with a different algorithm can beat AutoML.
+Another improvement is about HyperDrive configuration.  From some online research, it seems that hyperparameter sampling can have 2 stages: the first stage uses RandomParameterSampling for initial hyperparameter search, and then the second stage uses BayesianParameterSampling to refine the search for the best hyperparameter.  In addition, we can try another classification algorithm, such as RandomForester.  I'd like to see if the refined 2-stage hyperparameter tuning combined with a different algorithm can beat AutoML.
 
 ## Proof of cluster clean up
 
