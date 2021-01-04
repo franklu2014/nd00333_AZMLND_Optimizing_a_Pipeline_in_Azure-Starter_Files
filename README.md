@@ -55,9 +55,9 @@ Architecture-wise, the VotingEnsemble classifier collects predictions from multi
 ## Future work
 **What are some areas of improvement for future experiments? Why might these improvements help the model?**
 
-If the time and resource permit, I would like to try deep learning algorithms with both HyperDrive and AutoML.  As deep learning algorithms are known to discover the non-linear relations between features and lables, it will be intersting to see if deep learning algorithms can outperform traditional ML models in this project.
+If the time and resource permit, I would like to try deep learning algorithms with both HyperDrive and AutoML.  As deep learning algorithms are known to discover the non-linear relations between features and lables, it will be intersting to see if the non-linear relations discovered by deep learning models can lead to a higher accuracy than traditional models.
 
-Another improvement is about HyperDrive configuration.  From some online research, it seems that hyperparameter sampling can have 2 stages: the first stage uses RandomParameterSampling for initial hyperparameter search, and then the second stage uses BayesianParameterSampling to refine the search for the best hyperparameter.  In addition, we can try another classification algorithm, such as RandomForester.  I'd like to see if the refined 2-stage hyperparameter tuning combined with a different algorithm can beat AutoML.
+Another improvement is about hyperparameter tunning.  From some online research, it seems that hyperparameter sampling can have 2 stages: the first stage uses RandomParameterSampling for initial hyperparameter search, and then the second stage uses BayesianParameterSampling to refine the search for the best hyperparameter.  Because the 'no' class appears more frequently than the 'yes' class, we may also include the `class_weight` hyperparameter in HyperDriveConfig.  With the additional hyperparameter and refined 2-stage tuning, we might be able to find the best set of hyperparameters and have a LogisticRegression model performing perfectly for this dataset.
 
 ## Proof of cluster clean up
 
