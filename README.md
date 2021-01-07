@@ -24,7 +24,7 @@ After the count of max_total_runs is reached, we can look into the best performi
 
 **What are the benefits of the parameter sampler you chose?**
 
-In the configuration of HyperDrive, we use RandomParameterSampling to randomly sample the `C` papameter from a Uniform distribution between [0.01, 10].  Sampling this way can explore the parameter space randomly when the ballpark is unknown, so it will find the suitable hyperparameter faster than exhausting the possible range. 
+In the configuration of HyperDrive, we use RandomParameterSampling to randomly sample the `C` papameter from a Uniform distribution between [0.01, 10].  HyperDrive has 3 samplers: GridParameterSampling, BayesianParameterSampling, and RandomParameterSampling.  GridParameterSampling works with discrete parameters and isn't suitable for our case here.  BayesianParameterSampling requires much more resources to explore the hyperparameter space, which might exceed the limits on experiment VM.  On the other hand, RandomParameterSampling works with continuous parameters and requires less resource, therefore it's chosen.
 
 **What are the benefits of the early stopping policy you chose?**
 
